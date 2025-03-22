@@ -477,12 +477,12 @@
                         .then(token => {
                             console.log('Auth Token Received:', token);
                             console.log('Sending data to server');
-                            fetch('https://d2u4fyx6ods8mm.cloudfront.net/registration/submit/', {
+                            fetch('https://d2u4fyx6ods8mm.cloudfront.net/registration/submit', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
                                     'Accept': 'application/json',
-                                    'Authorization': token,
+                                    'Authorization': token, 
                                 },
                                 body: JSON.stringify({
                                     data: payload,
