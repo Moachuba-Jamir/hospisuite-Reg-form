@@ -466,7 +466,7 @@
                     };
                     console.log('\n\nPayload generated:', payload);
     
-                    fetch('http://localhost:8000/registration/auth/', {
+                    fetch('https://d2u4fyx6ods8mm.cloudfront.net/registration/auth/', {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
@@ -477,7 +477,7 @@
                         .then(token => {
                             console.log('Auth Token Received:', token);
                             console.log('Sending data to server');
-                            fetch('http://localhost:8000/registration/submit/', {
+                            fetch('https://d2u4fyx6ods8mm.cloudfront.net/registration/submit/', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
