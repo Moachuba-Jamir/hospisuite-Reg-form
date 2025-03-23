@@ -1,0 +1,126 @@
+body {
+    background: linear-gradient(135deg, #e9e6e6 0%, #c8efe1 100%);
+    min-height: 100vh;
+    padding: 20px 10px; /* Base padding for smaller screens */
+}
+/* Banner styling */
+.form-container {
+max-width: 1000px; /* Increased max-width to make the banner larger */
+}
+.banner-image {
+width: 100%;
+height: auto; /* Maintain aspect ratio */
+border-radius: 20px; /* Ample border-radius for a rounded look */
+box-shadow: 0 18px 16px rgba(0, 0, 0, 0.15); /* Box shadow for depth */
+}
+/* Ensure the banner remains responsive on smaller screens */
+@media (max-width: 576px) {
+.banner-image {
+border-radius: 15px; /* Slightly smaller border-radius on mobile */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow on mobile */
+}
+.form-container {
+max-width: 100%; /* Full width on mobile for better fit */
+}
+}
+.form-section {
+    background: #ffffff;
+    border-left: 5px solid #222323c2;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.form-section-valid {
+    border-left-color: #7ab8a6;
+}
+.form-label {
+    color: #2e5e54;
+    font-weight: 500;
+}
+.form-control, .form-select {
+    border-color: #b8d8cc;
+    transition: all 0.3s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #7ab8a6;
+    box-shadow: 0 0 5px rgba(122, 184, 166, 0.5);
+}
+.form-check-input:checked {
+    background-color: #7ab8a6;
+    border-color: #7ab8a6;
+}
+.btn-success {
+    background-color: #7ab8a6;
+    border-color: #7ab8a6;
+    transition: all 0.3s ease;
+}
+.btn-success:hover {
+    background-color: #619d8c;
+    border-color: #619d8c;
+    transform: translateY(-2px);
+}
+#otherProfessionField {
+    display: none;
+}
+/* Styling for select elements */
+.form-select {
+    width: 100%;
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-bottom: 2px solid #7ab8a6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .form-select {
+        font-size: 0.875rem;
+        padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    }
+    .form-section {
+        padding: 15px;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+label {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-style: italic;
+}
+.btn-black {
+    background-color: #000;
+    color: #FFF;
+    margin-block: 3%;
+}
+
+.btn-black:hover {
+    color: #FFF;
+}
+input::placeholder {
+    color: gray; /* Change placeholder text color */
+    font-size: 12px; /* Adjust font size */
+    font-style: italic; /* Make it italic */
+    opacity: .7; /* Ensure it's fully visible */
+  }
+
+/* Styling for select elements */
+.form-select {
+width: 100%;
+padding: 0.75rem 1.75rem 0.75rem 0.75rem; /* Increased vertical padding to make the select taller */
+font-size: 1.2rem;
+line-height: 1.5; /* Ensure text is vertically centered */
+border-bottom: 2px solid #343434a6;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+.form-select {
+font-size: 0.875rem;
+padding: 0.5rem 1.5rem 0.5rem 0.5rem; /* Slightly increased padding on mobile */
+}
+}
