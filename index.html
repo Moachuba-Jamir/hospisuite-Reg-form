@@ -232,7 +232,7 @@
                                 .then(response => response.json())
                                 .then(data => {
                                     if (data.msg === "Duplicate Data") {
-                                        alert('You have already registered with this email id');
+                                        alert('You have already registered with this email id\n\nRedirecting to WhatsApp Bot...');
                                         document.querySelector('form').reset();
                                         setTimeout(() => {
                                             let link = document.createElement("a");
@@ -241,20 +241,11 @@
                                             document.body.appendChild(link);
                                             link.click();
                                             document.body.removeChild(link);
-                                        }, 1000);
+                                        }, 2000);
                                     } else if (data.msg === "Form submitted successfully") {
-                                        alert('Register Success!!\nThank you for registering with Hospisuite.\n\nRedirecting to Hospisuite WhatsApp Bot');
-                                        document.querySelector('form').reset();
-                                        setTimeout(() => {
-                                            let link = document.createElement("a");
-                                            link.href = "https://wa.me/918415082512";
-                                            link.target = "_blank";
-                                            document.body.appendChild(link);
-                                            link.click();
-                                            document.body.removeChild(link);
-                                        }, 1000);
+                                        window.location.href = "./thankyou.html";
                                     } else {
-                                        alert('Form submission failed. Please try again.');
+                                        alert('Form submission failed. Please try again.\n\nRedirecting to WhatsApp Bot...');
                                         document.querySelector('form').reset();
                                         setTimeout(() => {
                                             let link = document.createElement("a");
@@ -263,7 +254,7 @@
                                             document.body.appendChild(link);
                                             link.click();
                                             document.body.removeChild(link);
-                                        }, 1000);
+                                        }, 2000);
                                     }
                                 })
                                 .catch(error => {
