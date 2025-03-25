@@ -232,29 +232,13 @@
                                 .then(response => response.json())
                                 .then(data => {
                                     if (data.msg === "Duplicate Data") {
-                                        alert('You have already registered with this email id\n\nRedirecting to WhatsApp Bot...');
                                         document.querySelector('form').reset();
-                                        setTimeout(() => {
-                                            let link = document.createElement("a");
-                                            link.href = "https://wa.me/918415082512";
-                                            link.target = "_blank";
-                                            document.body.appendChild(link);
-                                            link.click();
-                                            document.body.removeChild(link);
-                                        }, 2000);
+                                       window.location.href = "./alreadyRegistered.html";
                                     } else if (data.msg === "Form submitted successfully") {
                                         window.location.href = "./thankyou.html";
                                     } else {
-                                        alert('Form submission failed. Please try again.\n\nRedirecting to WhatsApp Bot...');
                                         document.querySelector('form').reset();
-                                        setTimeout(() => {
-                                            let link = document.createElement("a");
-                                            link.href = "https://wa.me/918415082512";
-                                            link.target = "_blank";
-                                            document.body.appendChild(link);
-                                            link.click();
-                                            document.body.removeChild(link);
-                                        }, 2000);
+                                        window.location.href = "./registrationFailed.html";
                                     }
                                 })
                                 .catch(error => {
